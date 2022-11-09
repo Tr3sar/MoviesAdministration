@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import { MatCardModule } from '@angular/material/card'
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon'
 
 import { MovieDescriptionComponent } from './components/movie-description/movie-description.component';
 import { MovieListComponent } from './components/movie-list/movie-list.component';
@@ -27,7 +29,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MatToolbarModule,
     HttpClientModule,
-    MatCardModule
+    MatCardModule,
+    MatInputModule,
+    MatIconModule
   ],
   providers: [MoviesService],
   bootstrap: [AppComponent]
