@@ -8,7 +8,7 @@ import { MoviesService } from 'src/app/services/movies.service';
 })
 export class MovieListComponent implements OnInit {
 
-  movieId: string = "2";
+  movieId: string = "";
 
   constructor(public moviesService: MoviesService) { }
 
