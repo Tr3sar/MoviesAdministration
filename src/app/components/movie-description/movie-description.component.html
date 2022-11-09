@@ -1,1 +1,8 @@
-<p>movie-description works!</p>
+<div *ngIf="movieSelected !== undefined">
+    <img src="https://image.tmdb.org/t/p/w500{{movieSelected.poster_path}}"><br>
+    <b>Titulo:</b> {{movieSelected.title}}<br>
+    <b>Fecha:</b> {{movieSelected.release_date}}<br>
+    <b>Idioma original:</b> {{movieSelected.original_language}}<br>
+    <b>Descripcion:</b> {{movieSelected.overview}}<br>
+    <b>Popularidad:</b> {{movieSelected.popularity}}
+</div>
