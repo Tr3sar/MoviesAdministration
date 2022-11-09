@@ -1,1 +1,16 @@
-<p>movie-list works!</p>
+<div class="main-container">
+    <div class="left-container">
+        <h1>Listado de peliculas</h1>
+
+        <mat-card *ngFor="let movie of moviesService.movies">
+            <div (click)="setMovieId(movie.id)">
+                {{movie.title}}
+            </div>
+        </mat-card>>
+    </div>
+    
+    <div class="right-container" *ngIf="movieId!==''">
+        <h1>Descripción del componente</h1>
+        <app-movie-description [movieId]="movieId"></app-movie-description>
+    </div>
+</div>
