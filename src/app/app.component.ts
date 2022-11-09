@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MoviesAdministration';
+
+  goToTMDB() {
+    var win = window.open('https://www.themoviedb.org/', '_blank');
+    win?.focus();
+  }
 }
