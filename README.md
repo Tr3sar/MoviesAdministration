@@ -1,4 +1,4 @@
-# Okode Movies demo using TMDB (https://www.themoviedb.org/)
+# Okode Movies demo using TMDB API (https://www.themoviedb.org/)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1.
 
