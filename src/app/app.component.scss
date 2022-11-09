@@ -1,8 +1,9 @@
 mat-toolbar{
-    background-color: #333333;
+    background-color: #252525;
 
     min-width: fit-content;
     .logo{
+        cursor: pointer;
         width: 25vw;
     }
 }
