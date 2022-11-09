@@ -7,6 +7,7 @@
         min-height: 100%;
 
         border-right: 3px solid #252525;
+        padding-right: 1rem;
 
         mat-form-field{
             max-width: 90%;
@@ -20,6 +21,11 @@
             cursor: text;
             background-color: transparent;
             border: transparent;
+        }
+
+        mat-card{
+            box-shadow: 5px 5px 13px;
+            color: black;
         }
 
         mat-card > div{

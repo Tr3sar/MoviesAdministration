@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Movie } from 'src/app/interfaces/movies';
 import { MoviesService } from 'src/app/services/movies.service';
 
 @Component({
@@ -19,8 +20,27 @@ export class MovieListComponent implements OnInit {
     this.moviesService.searchData(value);
   }
 
-  setMovieId(title: string) {
-    this.movieId = title;
+  setMovieId(id: string) {
+    this.movieId = id;
+    this.setSelectedColor(id);
+  }
+
+  setSelectedColor(id: string) {
+    let card = document.getElementById(id);
+
+    this.moviesService.movies.forEach((movie: Movie) => {
+      let movieCard = document.getElementById(movie.id + "");
+      if (movieCard != undefined) {
+        movieCard.style.background = 'white';
+        movieCard.style.fontWeight = 'normal';
+        console.log('a')
+      }
+    });
+
+    if (card != undefined) {
+      card.style.background = 'linear-gradient(to right, #EAECC6, #2BC0E4)';
+      card.style.fontWeight = 'bold'
+    }
   }
 
 }

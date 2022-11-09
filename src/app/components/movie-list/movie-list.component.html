@@ -10,7 +10,7 @@
             </button>
         </mat-form-field>
 
-        <mat-card *ngFor="let movie of moviesService.filteredMovies">
+        <mat-card *ngFor="let movie of moviesService.filteredMovies" id="{{movie.id}}">
             <div (click)="setMovieId(movie.id)">
                 {{movie.title}}
             </div>
@@ -18,7 +18,7 @@
     </div>
     
     <div class="right-container" *ngIf="movieId!==''">
-        <h1>Descripción del componente</h1>
+        <h1>Detalles de la pelicula</h1>
         <app-movie-description [movieId]="movieId"></app-movie-description>
     </div>
 </div>
