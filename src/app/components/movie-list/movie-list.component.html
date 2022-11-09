@@ -2,11 +2,19 @@
     <div class="left-container">
         <h1>Listado de peliculas</h1>
 
-        <mat-card *ngFor="let movie of moviesService.movies">
+        <mat-form-field appearance="fill">
+            <mat-label>Buscar peliculas</mat-label>
+            <input matInput type="text" id="input-text" (input)="filterMovies()">
+            <button matSuffix>
+                <mat-icon matSuffix>search</mat-icon>
+            </button>
+        </mat-form-field>
+
+        <mat-card *ngFor="let movie of moviesService.filteredMovies">
             <div (click)="setMovieId(movie.id)">
                 {{movie.title}}
             </div>
-        </mat-card>>
+        </mat-card>
     </div>
     
     <div class="right-container" *ngIf="movieId!==''">

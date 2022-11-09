@@ -1,16 +1,36 @@
 .main-container{
     display: flex;
+    min-height: 90%;
     .left-container{
-        min-width: 150px;
-        width: 30vw;
+        text-align: center;
+        min-width: 30%;
+        min-height: 100%;
+
+        border-right: 3px solid #252525;
+
+        mat-form-field{
+            max-width: 90%;
+        }
+
+        button{
+            background-color: transparent;
+            border: transparent;
+        }
+        button:hover{
+            cursor: text;
+            background-color: transparent;
+            border: transparent;
+        }
 
         mat-card > div{
             cursor: pointer;
+            text-align: left;
         }
     }
 
     .right-container{
         margin-left: 3rem;
+        margin-right: 3rem;
         min-width: 150px;
     }
 }

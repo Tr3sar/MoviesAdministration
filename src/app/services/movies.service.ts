@@ -12,11 +12,19 @@ export class MoviesService {
   apiKey = '9de91dffec28830cdaaf7ecc3225502e'
 
   movies: any;
+  filteredMovies: any;
 
   constructor(private http: HttpClient) { 
     this.getPopularMovies().subscribe((movies) => {
       this.movies = Object.values(movies)[1];
+      this.filteredMovies = Object.values(movies)[1];
     })
+  }
+
+  searchData(searchValue: any) {
+    this.filteredMovies = this.movies.filter((item: Movie) => {
+      return item.title.toLowerCase().includes(searchValue.toLowerCase());
+    });
   }
 
   getPopularMovies() : Observable<RootObject[]>{
