@@ -1,0 +1,17 @@
+.main-container{
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    .top-container{
+        margin-left: 2rem;
+    }
+    .bottom-container{
+        margin-top: 3rem;
+        text-align: justify;
+    }
+
+    img{
+        height: 17rem;
+    }
+}

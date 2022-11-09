@@ -1,8 +1,12 @@
-<div *ngIf="movieSelected !== undefined">
+<div *ngIf="movieSelected !== undefined" class="main-container">
     <img src="https://image.tmdb.org/t/p/w500{{movieSelected.poster_path}}"><br>
-    <b>Titulo:</b> {{movieSelected.title}}<br>
-    <b>Fecha:</b> {{movieSelected.release_date}}<br>
-    <b>Idioma original:</b> {{movieSelected.original_language}}<br>
-    <b>Descripcion:</b> {{movieSelected.overview}}<br>
-    <b>Popularidad:</b> {{movieSelected.popularity}}
+    <div class="top-container">
+        
+        <p><b>Titulo:</b> {{movieSelected.title}}</p>
+        <p><b>Fecha:</b> {{movieSelected.release_date}}</p>
+        <p><b>Idioma original:</b> {{movieSelected.original_language}}</p>
+    </div>
+    <div class="bottom-container">
+        <b>Descripción:</b> {{movieSelected.overview}}
+    </div>
 </div>
