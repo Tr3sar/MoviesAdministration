@@ -33,7 +33,6 @@ export class MovieListComponent implements OnInit {
       if (movieCard != undefined) {
         movieCard.style.background = 'white';
         movieCard.style.fontWeight = 'normal';
-        console.log('a')
       }
     });
 

@@ -16,9 +16,7 @@ export class MovieDescriptionComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     if (this.movieId !== '') {
-      console.log('ngOnChanges movies description');
       this.moviesService.getMovieById(this.movieId).subscribe((movie) => {
-        console.log(movie)
         this.movieSelected = movie;
       });
     }
